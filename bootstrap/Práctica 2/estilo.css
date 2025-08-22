@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+    .d-md-none {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .d-md-block {
+        display: none !important;
+    }
+}

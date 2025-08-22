@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 3 - Bootstrap</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tu CSS -->
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <!-- Contenedor principal -->
+  <div class="container contenedor mt-4">
+    <div class="row">
+      <div class="col">
+        <h1>Práctica 3 - Componentes</h1>
+        <p>Ejemplo integrando Bootstrap con CSS propio.</p>
+
+        <!-- 1) Alerta Success -->
+        <div class="alert alert-success" role="alert">
+          ¡Todo salió bien! Este es un mensaje de éxito.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2) Botón que abre Modal -->
+  <div class="container mt-4">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">
+      Abrir Modal
+    </button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="miModalLabel">Título del Modal</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          Aquí puedes poner cualquier contenido.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-success">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3) Cards -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Imagen 1">
+          <div class="card-body">
+            <h5 class="card-title">Título 1</h5>
+            <p class="card-text">Texto descriptivo.</p>
+            <a href="#" class="btn btn-primary">Link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Imagen 2">
+          <div class="card-body">
+            <h5 class="card-title">Título 2</h5>
+            <p class="card-text">Texto descriptivo.</p>
+            <a href="#" class="btn btn-primary">Link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Imagen 3">
+          <div class="card-body">
+            <h5 class="card-title">Título 3</h5>
+            <p class="card-text">Texto descriptivo.</p>
+            <a href="#" class="btn btn-primary">Link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card">
+          <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="Imagen 4">
+          <div class="card-body">
+            <h5 class="card-title">Título 4</h5>
+            <p class="card-text">Texto descriptivo.</p>
+            <a href="#" class="btn btn-primary">Link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4) Carrusel / Slider -->
+  <div class="container mt-5 celeste">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://via.placeholder.com/600x300?text=Imagen+1" class="d-block w-100" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://via.placeholder.com/600x300?text=Imagen+2" class="d-block w-100" alt="Imagen 2">
+        </div>
+        <div class="carousel-item">
+          <img src="https://via.placeholder.com/600x300?text=Imagen+3" class="d-block w-100" alt="Imagen 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Script Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

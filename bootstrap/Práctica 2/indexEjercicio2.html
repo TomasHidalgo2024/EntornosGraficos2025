@@ -1,0 +1,228 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS para Estructura Bootstrap</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #3498db;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .code-container {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+        }
+        .explanation {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+        .note {
+            background-color: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .preview {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .box {
+            width: 100px;
+            height: 80px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+        }
+        .sidebar {
+            background-color: #343a40;
+        }
+        .normal-box {
+            background-color: #74b9ff;
+        }
+        .large-box {
+            background-color: #17a2b8;
+            width: 220px;
+        }
+        @media (max-width: 767.98px) {
+            .preview {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS para Estructura de Sitio Web con Bootstrap</h1>
+    
+    <div class="explanation">
+        <h2>Archivo estilo.css</h2>
+        <p>Este CSS debe guardarse en un archivo llamado <strong>estilo.css</strong> y enlazarse después de Bootstrap en el HTML.</p>
+        
+        <div class="note">
+            <strong>Nota:</strong> Este CSS está diseñado para trabajar con la estructura HTML de Bootstrap y las clases que se muestran en el ejemplo.
+        </div>
+    </div>
+    
+    <div class="code-container">
+/* estilo.css */
+body {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.header {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.main-content {
+    padding: 0 15px;
+}
+
+.box {
+    background-color: #74b9ff;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-large {
+    background-color: #17a2b8;
+    height: 255px;
+}
+
+.box-sm {
+    background-color: #74b9ff;
+    height: 120px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.box-sm-large {
+    background-color: #17a2b8;
+    height: 120px;
+}
+
+.d-sm-only {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .d-md-only {
+        display: none;
+    }
+    
+    .d-sm-only {
+        display: block;
+    }
+}
+    </div>
+    
+    <div class="explanation">
+        <h2>Explicación de las clases CSS</h2>
+        
+        <h3>Clases principales:</h3>
+        <ul>
+            <li><strong>.sidebar</strong> - Estilo para la barra lateral con fondo oscuro</li>
+            <li><strong>.box</strong> - Estilo para los 6 rectángulos azules</li>
+            <li><strong>.box-large</strong> - Estilo para el rectángulo celeste grande</li>
+            <li><strong>.box-sm</strong> y <strong>.box-sm-large</strong> - Versiones para dispositivos pequeños</li>
+        </ul>
+        
+        <h3>Clases de utilidad:</h3>
+        <ul>
+            <li><strong>.d-md-only</strong> - Muestra elementos solo en resoluciones medianas y superiores</li>
+            <li><strong>.d-sm-only</strong> - Muestra elementos solo en resoluciones pequeñas</li>
+            <li><strong>.main-content</strong> - Espaciado para el contenido principal</li>
+        </ul>
+        
+        <h3>Media Query:</h3>
+        <p>El media query <strong>@media (max-width: 767.98px)</strong> controla el cambio entre los dos diseños:</p>
+        <ul>
+            <li>Oculta el diseño para desktop (.d-md-only)</li>
+            <li>Muestra el diseño para móviles (.d-sm-only)</li>
+        </ul>
+    </div>
+    
+    <div class="preview">
+        <h3>Vista Previa de Colores</h3>
+        <div class="box sidebar">Barra Lateral</div>
+        <div class="box normal-box">Caja Normal</div>
+        <div class="box large-box">Caja Grande</div>
+    </div>
+    
+    <div class="explanation">
+        <h2>Instrucciones de uso</h2>
+        <ol>
+            <li>Crear un archivo llamado <strong>estilo.css</strong></li>
+            <li>Copiar todo el contenido CSS del recuadro superior</li>
+            <li>Pegarlo en el archivo estilo.css</li>
+            <li>Enlazar el archivo CSS después de Bootstrap en el HTML:</li>
+        </ol>
+        
+        <div class="code-container">
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="estilo.css"&gt;
+        </div>
+    </div>
+</body>
+</html>
